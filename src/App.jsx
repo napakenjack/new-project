@@ -5,7 +5,8 @@ import ProductList from './pages/ProductList';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
-import Payment from './pages/Payment';
+import Success from './components/Success';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products/:category" element={<ProductList/>}/>
           <Route path="/product/:id" element={<Product/>}/>
           <Route path="/cart" element={<Cart/>} />
+          <Route path="/success" element={<Success/>} />
           <Route path="/login" element={<Login/>}>
             {user ? <Route path ="*" element={<Navigate to ="/" />}/> : <Login/>}
           </Route>

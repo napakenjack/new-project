@@ -4,6 +4,8 @@ import {Search, ShoppingCartOutlined} from '@material-ui/icons'
 import Badge from '@mui/material/Badge';
 import styled from 'styled-components'
 import {mobile} from '../responsive'
+import {Link} from 'react-router-dom'
+import Cart from '../pages/Cart'
 
 const Container =  styled.div`
     height: 60px;
@@ -102,11 +104,13 @@ const Navbar = () => {
                 <Right>
                     <MenuItem>Register</MenuItem>
                     <MenuItem>Sign in</MenuItem>
+                    <Link to="/cart">
                     <MenuItem>
                     <Badge badgeContent={quantity} color="primary">
                           <ShoppingCartOutlined/>
                     </Badge>
                     </MenuItem>
+                    </Link>
                 </Right>
             </Wrapper>            
         </Container >

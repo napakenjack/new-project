@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios'
 
-const KEY = "pk_test_51K0qcyGbW2WHQwxEl8MVkGi6i9tTucIJaeRzHSsRurmo5vxZJBwWOGwQEKQIztRZBSm3p3RqJjh0bQ3OSubLHlYC00QRrqbzgX"
+const KEY = process.env.REACT_APP_STRIPE;
 
 const Container = styled.div`
 
